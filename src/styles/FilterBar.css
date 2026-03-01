@@ -1,0 +1,94 @@
+.filter-bar {
+  border-bottom: 1px solid var(--border);
+  padding: 10px 24px;
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.filter-tab {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-pixel);
+  font-size: 16px;
+  padding: 1px 10px;
+  cursor: pointer;
+}
+
+.filter-tab:hover {
+  color: var(--accent-flesh);
+  border-color: var(--accent-flesh);
+}
+
+.filter-tab.active {
+  background: var(--accent-red);
+  border-color: var(--accent-red);
+  color: var(--text);
+}
+
+.filter-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.filter-status {
+  display: flex;
+  gap: 4px;
+}
+
+.status-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-song);
+  font-size: 13px;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+.status-btn:hover {
+  color: var(--accent-flesh);
+  border-color: var(--accent-flesh);
+}
+
+.status-btn.active {
+  border-color: var(--accent-red);
+  color: var(--accent-red);
+}
+
+.filter-search {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  color: var(--accent-flesh);
+  font-family: var(--font-song);
+  font-size: 13px;
+  padding: 3px 10px;
+  outline: none;
+  width: 150px;
+}
+
+.filter-search::placeholder {
+  color: var(--text);
+}
+
+.filter-search:focus {
+  border-color: var(--link);
+}

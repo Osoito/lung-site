@@ -1,0 +1,12 @@
+.comics-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.comics-grid {
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}

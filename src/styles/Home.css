@@ -1,0 +1,131 @@
+.home {
+  padding: 36px 48px;
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.home-header {
+  margin-bottom: 8px;
+}
+
+.home-title {
+  font-family: var(--font-song);
+  font-size: 38px;
+  color: var(--accent-flesh);
+  text-shadow: darkred 1px 1px;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.home-subtitle {
+  font-family: var(--font-song);
+  font-size: 14px;
+  color: var(--text);
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+
+.home-rule {
+  color: var(--border);
+  font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 20px 0;
+  font-family: var(--font-pixel);
+}
+
+.home-about {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.home-about p {
+  font-family: var(--font-song);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.home-stats {
+  display: flex;
+  gap: 18px;
+  font-family: var(--font-pixel);
+  font-size: 15px;
+  color: #6B5585;
+  margin-top: 14px;
+  flex-wrap: wrap;
+  letter-spacing: 1px;
+}
+
+.home-status-dot {
+  color: var(--accent-red);
+  animation: flicker 4s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+.home-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.home-nav-item {
+  display: block;
+  border: 1px solid var(--border);
+  padding: 12px 16px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.home-nav-item:hover {
+  border-color: var(--accent-flesh);
+  color: var(--accent-flesh);
+}
+
+.home-nav-label {
+  font-family: var(--font-song);
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.home-nav-desc {
+  font-family: var(--font-song);
+  font-size: 13px;
+  color: var(--link);
+  margin-top: 3px;
+}
+
+.home-nav-item:hover .home-nav-desc {
+  color: var(--accent-flesh);
+}
+
+.home-section-title {
+  font-family: var(--font-song);
+  font-size: 15px;
+  color: var(--accent-flesh);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.news-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.news-list li {
+  font-family: var(--font-song);
+  font-size: 13px;
+  color: var(--text);
+  padding-left: 14px;
+  border-left: 2px solid var(--border);
+  line-height: 1.6;
+}
+
+.news-list li::before {
+  content: '- ';
+  color: var(--border);
+}

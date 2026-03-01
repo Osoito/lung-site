@@ -1,0 +1,165 @@
+.contact {
+  padding: 36px 48px;
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contact-header {
+  margin-bottom: 8px;
+}
+
+.contact-title {
+  font-family: var(--font-song);
+  font-size: 38px;
+  color: var(--accent-flesh);
+  text-shadow: darkred 1px 1px;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.contact-subtitle {
+  font-family: var(--font-pixel);
+  font-size: 15px;
+  color: var(--border);
+  letter-spacing: 2px;
+  margin-top: 6px;
+}
+
+.contact-rule {
+  color: var(--border);
+  font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 20px 0;
+  font-family: var(--font-pixel);
+}
+
+.contact-intro {
+  font-family: var(--font-song);
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ── Channel label ── */
+
+.channel-label {
+  font-family: var(--font-pixel);
+  font-size: 16px;
+  color: var(--accent-red);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.channel-note {
+  font-family: var(--font-song);
+  font-size: 13px;
+  color: var(--link);
+  margin-top: 10px;
+}
+
+/* ── QR code frame ── */
+
+.qr-frame {
+  display: inline-block;
+  position: relative;
+  border: 1px solid var(--border);
+  padding: 14px;
+  background: var(--card-bg);
+  cursor: zoom-in;
+}
+
+.qr-frame:hover {
+  border-color: var(--link);
+}
+
+.qr-image {
+  display: block;
+  width: 200px;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+/* ── Lightbox ── */
+
+.qr-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 10, 14, 0.92);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 200;
+  cursor: zoom-out;
+}
+
+.qr-lightbox-img {
+  max-width: min(480px, 80vw);
+  max-height: 80vh;
+  height: auto;
+  border: 1px solid var(--border);
+  image-rendering: pixelated;
+}
+
+.qr-lightbox-hint {
+  font-family: var(--font-pixel);
+  font-size: 15px;
+  color: var(--border);
+  letter-spacing: 1px;
+}
+
+/* ── Weibo panel ── */
+
+.weibo-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid var(--border);
+  padding: 16px 20px;
+  text-decoration: none;
+  color: var(--text);
+  width: fit-content;
+  min-width: 280px;
+}
+
+.weibo-panel:hover {
+  border-color: var(--link);
+  color: var(--accent-flesh);
+}
+
+.weibo-prompt {
+  font-family: var(--font-pixel);
+  font-size: 15px;
+  color: var(--accent-red);
+  letter-spacing: 1px;
+}
+
+.weibo-panel:hover .weibo-prompt {
+  color: var(--accent-flesh);
+}
+
+.weibo-url {
+  font-family: var(--font-pixel);
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+/* ── Footer ── */
+
+.contact-footer {
+  font-family: var(--font-pixel);
+  font-size: 15px;
+  color: var(--border);
+  letter-spacing: 1px;
+}

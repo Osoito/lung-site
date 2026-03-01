@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* === VARIABLES === */
+:root {
+  --bg: #0D0A0E;
+  --text: #D4C8DC;
+  --accent-flesh: #D4A090;
+  --accent-red: #7A1515;
+  --border: #2A2030;
+  --link: #C0A0B0;
+  --card-bg: #1A1520;
+  --navbar-width: 180px;
+  --font-pixel: 'VT323', 'Courier New', monospace;
+  /* 宋体 for all Chinese text — explicit fallback chain */
+  --font-song: 'SimSun', '宋体', 'Songti SC', 'STSong', serif;
+}
+
+/* === ANIMATIONS === */
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* Analog signal degradation — subtly irregular, not rhythmic */
+@keyframes flicker {
+  0%, 89%, 100% { opacity: 1; }
+  90%           { opacity: 0.25; }
+  92%           { opacity: 0.9; }
+  94%           { opacity: 0.4; }
+  96%           { opacity: 1; }
+  98%           { opacity: 0.15; }
+  99%           { opacity: 0.85; }
+}
+
+/* === RESET === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === BASE === */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  /* Barely-visible deep-space gradient — not a solid black */
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 12% 20%, rgba(80, 0, 60, 0.07) 0%, transparent 50%),
+    radial-gradient(ellipse at 88% 80%, rgba(100, 10, 0, 0.06) 0%, transparent 45%);
+  color: var(--text);
+  font-family: var(--font-pixel);
+  font-size: 18px;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+}
+
+/* Vignette — pulls edges into darkness */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    transparent 38%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* CRT scanlines — horizontal raster lines at 4px pitch */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent     0px,
+    transparent     2px,
+    rgba(0, 0, 0, 0.07) 2px,
+    rgba(0, 0, 0, 0.07) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-flesh);
+}
+
+img {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  max-width: 100%;
+  display: block;
+}
+
+hr {
+  border: none;
+  border-top: 1px dashed var(--border);
+  margin: 12px 0;
+}
+
+button {
+  border-radius: 0;
+}
+
+/* === APP LAYOUT === */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  margin-left: var(--navbar-width);
+  flex: 1;
+  min-width: 0;
+}
+
+/* === SHARED CARD ELEMENTS === */
+.tag {
+  border: 1px solid var(--border);
+  padding: 0 8px;
+  font-size: 13px;
+  color: var(--text);
+  font-family: var(--font-song);
+  white-space: nowrap;
+}
+
+.tag-status.completed {
+  border-color: var(--link);
+  color: var(--link);
+}
+
+.tag-status.in_progress {
+  border-color: var(--accent-red);
+  color: var(--accent-red);
+  animation: flicker 6s ease-in-out infinite;
+}
+
+.btn-action {
+  display: inline-block;
+  border: 1px solid var(--accent-red);
+  color: var(--text);
+  font-family: var(--font-pixel);
+  font-size: 16px;
+  padding: 2px 16px;
+  cursor: pointer;
+  text-decoration: none;
+  background: transparent;
+}
+
+.btn-action:hover {
+  background: var(--accent-red);
+  color: var(--text);
+}
+
+.btn-action.disabled {
+  border-color: var(--border);
+  color: var(--border);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.no-results {
+  color: var(--border);
+  font-size: 20px;
+  padding: 40px 0;
+  text-align: center;
+  font-family: var(--font-pixel);
+}
+
+/* === SCROLLBAR === */
+::-webkit-scrollbar {
+  width: 6px;
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-red);
+}

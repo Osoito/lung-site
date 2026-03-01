@@ -1,0 +1,129 @@
+.about {
+  padding: 36px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.about-header {
+  margin-bottom: 8px;
+}
+
+.about-title {
+  font-family: var(--font-song);
+  font-size: 38px;
+  color: var(--accent-flesh);
+  text-shadow: darkred 1px 1px;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.about-subtitle {
+  font-family: var(--font-pixel);
+  font-size: 15px;
+  color: var(--border);
+  letter-spacing: 3px;
+  margin-top: 6px;
+}
+
+.about-rule {
+  color: var(--border);
+  font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 20px 0;
+  font-family: var(--font-pixel);
+}
+
+/* ── Members grid ── */
+
+.about-members {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  align-items: start;
+}
+
+.member-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.member-index {
+  font-family: var(--font-pixel);
+  font-size: 13px;
+  color: var(--border);
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.member-name {
+  font-family: 楷体;
+  font-size: 22px;
+  color: var(--accent-flesh);
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.member-subname {
+  font-family: 楷体;
+  font-size: 13px;
+  color: var(--link);
+  letter-spacing: 0;
+  margin-top: -2px;
+}
+
+.member-role {
+  font-family: 楷体;
+  font-size: 14px;
+  color: var(--border);
+  letter-spacing: 1px;
+  margin-top: 2px;
+  margin-bottom: 6px;
+}
+
+.member-bio-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.member-bio-list li {
+  font-family: 楷体;
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.7;
+  padding-left: 14px;
+  position: relative;
+}
+
+.member-bio-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--text);
+  font-family: var(--font-pixel);
+}
+
+/* ── Footer ── */
+
+.about-footer {
+  font-family: var(--font-pixel);
+  font-size: 15px;
+  color: var(--border);
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 24px 20px;
+  }
+  .about-members {
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+  }
+}
