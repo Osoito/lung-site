@@ -92,3 +92,14 @@
 .filter-search:focus {
   border-color: var(--link);
 }
+
+@media (max-width: 640px) {
+  .filter-bar {
+    top: 48px;
+    padding: 8px 14px;
+  }
+
+  .filter-search {
+    width: 110px;
+  }
+}

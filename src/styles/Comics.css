@@ -10,3 +10,9 @@
   flex-direction: column;
   gap: 14px;
 }
+
+@media (max-width: 640px) {
+  .comics-grid {
+    padding: 14px;
+  }
+}

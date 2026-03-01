@@ -129,3 +129,9 @@
   content: '- ';
   color: var(--border);
 }
+
+@media (max-width: 640px) {
+  .home {
+    padding: 24px 20px;
+  }
+}

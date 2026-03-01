@@ -119,6 +119,12 @@
   letter-spacing: 1px;
 }
 
+@media (max-width: 640px) {
+  .contact {
+    padding: 24px 20px;
+  }
+}
+
 /* ── Weibo panel ── */
 
 .weibo-panel {
