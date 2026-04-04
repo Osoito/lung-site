@@ -1,25 +1,19 @@
 .comic-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--border);
   display: flex;
   gap: 16px;
   padding: 16px;
 }
 
-/* In-progress: left border bleeds red, marking active/unfinished work */
+/* In-progress: left border red indicates undone */
 .comic-card[data-status="in_progress"] {
-  border-left-color: var(--accent-red);
+  border-left: 3px solid var(--accent-red);
 }
 
-/* Hover: edge brightens — no transition, instant pixel snap */
+/* Hover: border brightens — no transition, instant pixel snap */
 .comic-card:hover {
   border-color: var(--accent-flesh);
-  border-left-color: var(--accent-flesh);
-}
-
-.comic-card[data-status="in_progress"]:hover {
-  border-left-color: var(--accent-flesh);
 }
 
 .comic-card-cover {
