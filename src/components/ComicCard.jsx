@@ -49,7 +49,7 @@ function ComicCard({ comic }) {
             ) : (
               <span className="btn-action disabled">暂无下载</span>
             )}
-            {read_url && (
+            {/* {read_url && (
               <a
                 href={read_url}
                 target="_blank"
@@ -58,7 +58,7 @@ function ComicCard({ comic }) {
               >
                 站外阅读
               </a>
-            )}
+            )} */}
           </div>
         </div>
       </div>
